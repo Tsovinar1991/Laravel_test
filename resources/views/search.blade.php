@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="content container" style="background-color: darkseagreen">
+    <div class="content container">
         <h1>Search Result</h1>
         @if(isset($success))
             <div class="success">

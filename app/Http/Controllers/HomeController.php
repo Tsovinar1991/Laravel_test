@@ -44,5 +44,4 @@ class HomeController extends Controller
 
 }
 
-//16-rdn em hasel
-//12-rn em hasel
+

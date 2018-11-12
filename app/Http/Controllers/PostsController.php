@@ -75,7 +75,8 @@ class PostsController extends Controller
 //        //auth()->user()->id
 //        $post->save();
 
-        return redirect('/posts')->with('success', "Post Created");
+
+        return redirect("/posts")->with('success', "Post Created");
     }
 
     /**
@@ -146,7 +147,7 @@ class PostsController extends Controller
         $post->text = $request->input('text');
         $post->cover_image = $fileNameToStore;
         $post->save();
-        return redirect('/posts/'.$post->id)->with('success', "Updated");
+        return redirect('/posts/'.$post->id)->with('success', "Post Updated");
 
 
     }
@@ -172,8 +173,6 @@ class PostsController extends Controller
 
         $post->delete();
         return redirect("/home");
-
-
 
     }
 }
