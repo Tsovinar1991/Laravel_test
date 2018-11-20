@@ -10,7 +10,7 @@
         {{ csrf_field() }}
         <div class="form-group">
         {{Form::label('name', 'Title')}}
-        {{Form::text('name', '', ['class'=>'form-control', 'placeholder'=> 'Title', 'required' => 'required'])}}
+        {{Form::text('name', '', ['class'=>'form-control',  'placeholder'=> 'Title', 'required' => 'required'])}}
         </div>
 
 

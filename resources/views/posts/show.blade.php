@@ -12,6 +12,9 @@
                                 <img src="/storage/cover_images/{{$post->cover_image}}" alt=""
                                      style="width:200px; height:200px;object-fit:cover;">
                                 <p>Written on {{$post->created_at}}</p>
+                                @foreach($post->creators as $creator)
+                                     <p>Creator: {{$creator->name}} {{$creator->lastname}}</p>
+                                @endforeach
                                 @if(!Auth::guest())
                                     @if(Auth::user()->id === $post->user_id )
                                         <a href="/posts/{{$post->id}}/edit" class="btn btn-default">Edit</a>

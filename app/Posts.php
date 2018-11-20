@@ -3,6 +3,8 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Creator;
+
 
 class Posts extends Model
 {
@@ -22,6 +24,11 @@ class Posts extends Model
 
     public function user(){
         return $this->belongsTo('App\User');
+    }
+
+
+    public function creators(){
+        return $this->hasMany(Creator::class);
     }
 
 }
